@@ -17,8 +17,6 @@ public class ConnectionPool {
 
     }
 
-
-
     public static Connection getConnection() throws SQLException {
         Context context;
         Connection connection = null; //"jdbc:mysql://localhost:3306/cruise_company?user=admin&password=ItIsWednesday"

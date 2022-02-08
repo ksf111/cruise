@@ -25,8 +25,8 @@
         <c:otherwise>
             <form action="controller" method="post">
                 <input type="hidden" name="command" value="login"><br>
-                <input name="login" value="user1"><br>
-                <input name="password" type="password" value="adminpass"><br>
+                <input name="login" value="user2"><br>
+                <input name="password" type="password" value="user2pass"><br>
                 <input type="submit" value="Login">
             </form>
             <form action="controller" method="post">
@@ -45,8 +45,6 @@
         <input type="hidden" name="command" value="listCruises">
         <input type="submit" value="Cruise list">
     </form>
-
-
 
 </body>
 </html>

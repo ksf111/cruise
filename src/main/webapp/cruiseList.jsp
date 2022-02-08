@@ -29,12 +29,17 @@
                 </td>
                 <c:if test="${loggedUser.roleId == 2}">
                     <td>
-                        <a href="bookTicket.jsp">Book place!</a>
+                        <form action="controller" method="post">
+                        <input type="hidden" name="command" value="bookTicket">
+                        <input type="submit" value="Book tickets">
+                        <input type="hidden" name="loggedUser" value="${loggedUser.login}">
+                        </form>
                     </td>
                 </c:if>
             </tr>
         </c:forEach>
     </table>
+
 <c:if test="${loggedUser.roleId == 1}">
     <form action="controller" method="get">
         <input type="hidden" name="command" value="editCruises">

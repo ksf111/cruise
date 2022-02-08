@@ -18,6 +18,8 @@ public class CommandContainer {
 		commands.put("register", new RegisterCommand());
 		commands.put("editCruises", new EditCruisesCommand());
 		commands.put("updateCruises", new UpdateCruisesCommand());
+		commands.put("bookTicket", new BookTicketCommand());
+		commands.put("submitApplication", new SubmitApplicationCommand());
 		// ...
 	}
 

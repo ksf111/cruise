@@ -1,16 +1,19 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Viacheslav
-  Date: 08.02.2022
-  Time: 3:16
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Book tickets</title>
 </head>
 <body>
-    In progress!
+<a href="index.jsp">Main page</a> <br>
+    ${loggedUser.login}
+    <form action="controller" method="post">
+        <input type="hidden" name="command" value="submitApplication">
+        <input name="Login" value="${loggedUser.login}">
+        <input name="Name">
+        <input name="Surname">
+        <input name="Birthdate">
+        <input type="submit" value="Submit application">
+    </form>
 </body>
 </html>
