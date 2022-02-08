@@ -3,7 +3,7 @@ package com.erat.service;
 import com.erat.annotation.Inject;
 import com.erat.annotation.Service;
 import com.erat.db.LinerRepository;
-import com.erat.entity.Liner;
+import com.erat.db.entity.Liner;
 
 @Service
 public class LinerService {
@@ -17,6 +17,10 @@ public class LinerService {
 
     public Liner createLiner(Liner liner) {
         // check if data is entered correctly (e.g. validate dates). This is called 'Business logic'
-        return linerRepository.addLiner(liner);
+        return linerRepository.create(liner);
+    }
+
+    public boolean deleteLiner (String name){
+        return linerRepository.deleteByName(name);
     }
 }
